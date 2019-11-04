@@ -2,10 +2,7 @@ package main
 
 import (
 	"context"
-	"database/sql"
 	"log"
-
-	"github.com/volatiletech/sqlboiler/boil"
 
 	"github.com/kancers/exsample-db/backend/sqlboiler/database"
 	"github.com/kancers/exsample-db/backend/sqlboiler/models"
@@ -18,11 +15,12 @@ func main() {
 		log.Fatalf("failed to mysql open %+v", err)
 	}
 
-	boil.SetDB(db)
+	// set global database
+	// boil.SetDB(db)
 
 	// select by id
 	ctx := context.Background()
-	user, err := models.Users().One(ctx, boil.GetContextDB())
+	user, err := models.Users().One(ctx, db)
 
 	if err != nil {
 		log.Fatalf("missing user: %+v", err)
