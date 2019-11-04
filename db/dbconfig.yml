@@ -1,0 +1,18 @@
+development:
+  dialect: mysql
+  datasource: root:pass@tcp(127.0.0.1)/demo?parseTime=true
+  dir: migrations/mysql
+  table: migrations
+
+staging:
+  dialect: mysql
+  datasource: root:pass@tcp(127.0.0.1)/demo?parseTime=true
+  dir: migrations/mysql
+  table: migrations
+
+production:
+  dialect: mysql
+  datasource: root:pass@tcp(127.0.0.1)/demo?parseTime=true
+  dir: migrations/mysql
+  table: migrations
+
