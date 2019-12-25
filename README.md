@@ -1,1 +1,1 @@
-# exsample-db
+# sqlboiler-sample 
