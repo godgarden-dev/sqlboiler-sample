@@ -2,7 +2,7 @@ version: '3'
 services:
   backend:
     image: golang:1.13.4
-    container_name: exsample-backend
+    container_name: example-backend
     tty: true
     volumes:
       - ./backend:/go
@@ -12,7 +12,7 @@ services:
       - db
   db:
     image: mysql:5.7
-    container_name: exsample-mysql
+    container_name: example-mysql
     volumes:
       - mysql_data:/var/lib/mysql:delegated
     environment:
