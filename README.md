@@ -1,1 +1,1 @@
-# sqlboiler-sample 
+https://github.com/volatiletech/sqlboiler
